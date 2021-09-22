@@ -1,0 +1,23 @@
+{
+  "name": "product-feedback-app",
+  "version": "1.0.0",
+  "description": "product feedback frontend app ",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maliy Vasil",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.42.0",
+    "webpack": "^5.53.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
