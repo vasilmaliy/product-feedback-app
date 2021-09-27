@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="basics sheet">
-      <section class="sheet__content">
+      <div class="sheet__content">
         <div class="container">
           <div class="sheet__navbar">
             <aside class="sheet__navbar-nav">
@@ -42,13 +42,58 @@
               </div>
             </aside>
           </div>
-          <div class="main">
-            <section class="sheet__main">
-              <header class="sheet__main-header"></header>
-            </section>
+          
+          <div class="main-wrapper">
+            <header class="sheet__main-header">
+              <div class="sheet__logo-suggestion-container">
+                <img src="./img/suggestions/icon-suggestions.svg" alt class="logo-suggestion">
+              </div>
+              <div class="sheet__main-header-suggestion-number">
+                <span id="suggestions-number">4</span>Suggestions
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-btn">
+                  Most Upvotes
+                  <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg" class="icona-arrow"><path d="M1 6l4-4 4 4" stroke="#fff" stroke-width="2" fill="none" fill-rule="evenodd"></path></svg>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-content--selected-sort">Most Upvotes</a>
+                  <a href="#" class="">Least Upvotes</a>
+                  <a href="#" class="">Most Comments</a>
+                  <a href="#" class="">Lest Comments</a>
+                </div>
+              </div>
+              <div class="sheet__add-feedback-button-container">
+                <button class="sheet__add-feedback-button" id="add-feedback-button">+ Add Feedback</button>
+              </div>
+            </header>
+  
+            <article class="main">
+              <div class="main__feedback-holder">
+                <section class="feedback-post">
+                  <div class="feedback-post__votes">
+                    <button class="vote-counter">
+                      <img src="./img/shared/icon-arrow-up.svg" alt="" class="feedback-post__icon-arrow" data-voted='false'>
+                      <span id="nuber-of-comments" class="str-number-of-comments">22</span>
+                    </button>
+                  </div>
+                  <div class="feedback-post__information">
+                    <h2 class="feedback-post__title">4 tags for solutions</h2>
+                    <p class="feedback-post__description">Easier to search for solutions based on a specific stack.</p>
+                    <div class="feedback-post__categorys-container">
+                      <button class="feedback-post__category">Bug</button>
+                    </div>
+                  </div>
+                  <div class="feedback-post__number-of-comments" >
+                    <img src="./img/shared/icon-comments.svg" alt="" class="icon-comments">
+                    <span id="feedback-post-number-of-comments">4</span>
+                  </div>
+                </section>
+              </div>
+            </article>  
           </div>
         </div>
-      </section>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
