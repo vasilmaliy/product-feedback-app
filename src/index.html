@@ -16,8 +16,16 @@
           <div class="sheet__navbar">
             <aside class="sheet__navbar-nav">
               <div class="logo sheet__navbar-element">
-                <h1>Frontend Mentor</h1>
-                <p>Feedback Board</p>
+                <div class="logo-text">
+                  <h1>Frontend Mentor</h1>
+                  <p>Feedback Board</p>
+                </div>
+              
+                <div id="toggle-icon" onclick="clickFunction()">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>
               </div>
               <div class="sheet__navbar-list sheet__navbar-element">
                   <button type="button" autofocus class="sheet__navbar-item" id="all">All</button>
@@ -27,7 +35,7 @@
                   <button class="sheet__navbar-item" id="bug">Bug</button>
                   <button class="sheet__navbar-item" id="feature">Feature</button>
               </div>
-              <div class="roadmap sheet__navbar-element"">
+              <div class="roadmap sheet__navbar-element">
                 <div class="roadmap__header">
                   <h2 class="roadmap__title">Roadmap</h2>
                   <a class="roadmap__detailed-information-link">View</a>
