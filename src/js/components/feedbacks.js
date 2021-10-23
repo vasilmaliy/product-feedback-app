@@ -15,9 +15,15 @@ const feedbacks = (selector, data, categoriesHolderSelector) => {
     render();
   };
 
-  const sortByCategory = (category) => {
-
-    render();
+  // asc - ascending
+  const sortByUpvotes = (asc = false) => {
+    const dirModifier = asc ? 1 : -1;
+    feedbacksArray.sort((aFeedback, bFeedback) => (aFeedback.upvotes > bFeedback.upvotes) ? (1 * dirModifier) : (-1 * dirModifier));
+  };
+  
+  const sortByNumberOfComments = (asc = false) => {
+    const dirModifier = asc ? 1 : -1;
+    feedbacksArray.sort((aFeedback, bFeedback) => (aFeedback.comments.length > bFeedback.comments.length) ? (1 * dirModifier) : (-1 * dirModifier));
   };
 
   const handleFilterClick = (event) => {
@@ -39,7 +45,7 @@ const feedbacks = (selector, data, categoriesHolderSelector) => {
                   <div class="feedback-post__votes">
                     <button class="vote-counter">
                       <img src="./img/shared/icon-arrow-up.svg" alt="" class="feedback-post__icon-arrow" data-voted='false'>
-                      <span id="nuber-of-comments" class="str-number-of-comments">22</span>
+                      <span id="nuber-of-comments" class="str-number-of-comments">${feedback.upvotes}</span>
                     </button>
                   </div>
                   <div class="feedback-post__information">
@@ -51,7 +57,7 @@ const feedbacks = (selector, data, categoriesHolderSelector) => {
                   </div>
                   <div class="feedback-post__number-of-comments" >
                     <img src="./img/shared/icon-comments.svg" alt="" class="icon-comments">
-                    <span id="feedback-post-number-of-comments">4</span>
+                    <span id="feedback-post-number-of-comments">${feedback.comments ? feedback.comments.length : 0}</span>
                   </div>
                 </section>
       </div> 
